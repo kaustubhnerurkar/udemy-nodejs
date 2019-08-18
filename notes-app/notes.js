@@ -6,6 +6,8 @@ const addNote = (title, body) => {
 
     const duplicateNote = notes.find((note) => note.title === title)
 
+    debugger
+
     if (!duplicateNote) {
         notes.push({
             title: title,
@@ -68,7 +70,7 @@ const listNotes = () => {
 
 const saveNotes = (notes) => {
     const dataJSON = JSON.stringify(notes)
-    fs.writeFileSync('notes.json', dataJSON)
+    fs.writeFileSync('notes.json', dataJsON)
 }
 
 module.exports = {
